@@ -8,17 +8,22 @@ class Number extends Component {
         {id:4, value:6}
     ]} 
     handleIncrement = () =>{
-        console.log(this.state.nums + 1)
+        console.log(this.state.nums)
     }
     render() { 
         // console.log(this.state.nums)
         return (<>
+                <div className="container">
+                    <h3>NavBar</h3>
                 {
                     this.state.nums.map((num)=>
                     <Numbers 
-                    key={num.id}>
+                    key={num.id}
+                    num={num}>
                     </Numbers>)
                 }
+                </div>
+               
         </>);
     }
 }
